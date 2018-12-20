@@ -1,0 +1,25 @@
+version: "2"
+
+services:
+  api:
+    build: ./../
+    command: demo-api
+    volumes:
+      - ./../package.json:/usr/src/package.json
+      - ./../yarn.lock:/usr/src/yarn.lock
+      - ./../src:/usr/src/src
+      - ./../index.js:/usr/src/index.js
+      - ./../examples:/usr/src/examples
+    ports:
+      - 3000:3000
+  service:
+    build: ./../
+    command: demo-sharp
+    volumes:
+      - ./../package.json:/usr/src/package.json
+      - ./../yarn.lock:/usr/src/yarn.lock
+      - ./../src:/usr/src/src
+      - ./../index.js:/usr/src/index.js
+      - ./../examples:/usr/src/examples
+  nats:
+    image: nats
