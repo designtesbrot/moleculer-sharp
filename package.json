@@ -1,6 +1,6 @@
 {
   "name": "moleculer-sharp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A sharp wrapper as a service for the moleculer framework",
   "main": "index.js",
   "repository": {
@@ -47,10 +47,10 @@
     "moleculer": ">= 0.13.0"
   },
   "dependencies": {
-    "node-fetch": "^2.3.0",
-    "ramda": "0.26.1",
-    "ramda-adjunct": "^2.10.0",
-    "sharp": "^0.21.1"
+    "node-fetch": "2.6.1",
+    "ramda": "0.27.1",
+    "ramda-adjunct": "2.31.1",
+    "sharp": "^0.27.2"
   },
   "engines": {
     "node": ">= 6.x.x"
