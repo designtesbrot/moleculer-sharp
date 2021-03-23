@@ -171,6 +171,10 @@ module.exports = {
 							}
 						});
 
+						stream.on('error', (err) => {
+							pipe.destroy(err);
+						});
+
 						// Start piping to the stream
 						stream.pipe(pipe);
 
