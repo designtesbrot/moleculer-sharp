@@ -5,6 +5,7 @@ const {drop, omit, prop} = require("ramda");
 const fetch = require("node-fetch");
 const {isReadableStream} = require("./helpers");
 const {SharpStreamAcquisitionError} = require("./errors");
+const Buffer = require('safe-buffer').Buffer;
 
 /**
  * Service mixin for image manipulation using sharp

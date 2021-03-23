@@ -41,6 +41,7 @@
     "nats": "^1.0.1",
     "node-res": "^5.0.1",
     "nodemon": "1.18.9",
+    "safe-buffer": "^5.2.1",
     "yarn-check": "0.0.3"
   },
   "peerDependencies": {
@@ -53,7 +54,7 @@
     "sharp": "^0.27.2"
   },
   "engines": {
-    "node": ">= 6.x.x"
+    "node": ">= 10.x.x"
   },
   "jest": {
     "coverageDirectory": "../coverage",
