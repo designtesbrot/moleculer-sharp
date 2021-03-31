@@ -5,6 +5,7 @@ const {drop, omit, prop} = require("ramda");
 const fetch = require("node-fetch");
 const {isReadableStream} = require("./helpers");
 const {SharpStreamAcquisitionError} = require("./errors");
+const Buffer = require('safe-buffer').Buffer;
 
 /**
  * Service mixin for image manipulation using sharp
@@ -168,6 +169,10 @@ module.exports = {
 									pipe[step[0]].apply(pipe, drop(1, step));
 								}
 							}
+						});
+
+						stream.on('error', (err) => {
+							pipe.destroy(err);
 						});
 
 						// Start piping to the stream
